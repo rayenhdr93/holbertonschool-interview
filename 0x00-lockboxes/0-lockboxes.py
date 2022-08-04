@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 '''pep8'''
 
+
 def canUnlockAll(boxes):
     for j in range(1, len(boxes) - 1):
         x = 0
