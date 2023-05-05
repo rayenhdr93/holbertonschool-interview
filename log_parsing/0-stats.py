@@ -22,7 +22,7 @@ try:
             s = 0
             for x in list:
                 if int(x) not in [200, 301, 400, 401, 403, 404, 405, 500]:
-                    pass
+                    continue
                 elif s == 0:
                     s = x
                 elif s != x:
@@ -42,8 +42,7 @@ finally:
             s = 0
             for x in list:
                 if int(x) not in [200, 301, 400, 401, 403, 404, 405, 500]:
-                    print(x)
-                    pass
+                    continue
                 elif s == 0:
                     s = x
                 elif s != x:
