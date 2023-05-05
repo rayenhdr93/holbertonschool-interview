@@ -8,9 +8,8 @@ list = []
 for line in sys.stdin:
     splitted = line.split()
     code = splitted[-2]
-    size = int(splitted[-1])
+    size += int(splitted[-1])
 
-    size += size
     list.append(code)
 
 
