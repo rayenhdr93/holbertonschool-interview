@@ -21,9 +21,11 @@ try:
             y = 1
             s = 0
             for x in list:
-                if s == 0:
+                if x not in ([200, 301, 400, 401, 403, 404, 405, 500]):
+                    pass
+                elif s == 0:
                     s = x
-                elif s != x and s in ([200, 301, 400, 401, 403, 404, 405, 500]):
+                elif s != x:
                     print("{}: {}".format(s, y))
                     s = x
                     y = 1
@@ -39,7 +41,9 @@ finally:
             y = 1
             s = 0
             for x in list:
-                if s == 0:
+                if x not in ([200, 301, 400, 401, 403, 404, 405, 500]):
+                    pass
+                elif s == 0:
                     s = x
                 elif s != x:
                     print("{}: {}".format(s, y))
@@ -47,4 +51,5 @@ finally:
                     y = 1
                 else:
                     y += 1
-            print("{}: {}".format(s, y))
+            if s in ([200, 301, 400, 401, 403, 404, 405, 500]):
+                print("{}: {}".format(s, y))
