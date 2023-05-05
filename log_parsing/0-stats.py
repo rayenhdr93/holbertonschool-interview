@@ -13,7 +13,7 @@ for line in sys.stdin:
     list.append(code)
 
 
-    if len(list) == 10:
+    if (len(list) % 10) == 0:
         print("File size:", size)
         list.sort()
         y = 1
@@ -22,10 +22,9 @@ for line in sys.stdin:
             if s == 0:
                 s = x
             elif s != x:
-                print(s,": ", y)
+                print("{}: {}".format(s, y))
                 s = x
                 y = 1
             else:
                 y += 1
-        print(s,": ", y)
-        list = []
+        print("{}: {}".format(s, y))
