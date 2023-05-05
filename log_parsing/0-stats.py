@@ -8,7 +8,7 @@ list = []
 try:
     for line in sys.stdin:
         splitted = line.split()
-        if len(splitted) > 5 and splitted[-2].isdigit() and splitted[-1].isdigit():
+        if len(splitted) == 9 and splitted[-2].isdigit() and splitted[-1].isdigit():
             code = splitted[-2]
             list.append(code)
         size += int(splitted[-1])
