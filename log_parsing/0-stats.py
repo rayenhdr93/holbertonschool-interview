@@ -5,15 +5,16 @@ import sys
 size = 0
 list = []
 
-for line in sys.stdin:
-    splitted = line.split()
-    code = splitted[-2]
-    size += int(splitted[-1])
+try: 
+    for line in sys.stdin:
+        splitted = line.split()
+        code = splitted[-2]
+        size += int(splitted[-1])
 
-    list.append(code)
+        list.append(code)
 
 
-    try:
+    
         if (len(list) % 10) == 0:
             print("File size:", size)
             list.sort()
@@ -29,7 +30,9 @@ for line in sys.stdin:
                 else:
                     y += 1
             print("{}: {}".format(s, y))
-    except KeyboardInterrupt:
+except Exception:
+        pass
+finally:
             print("File size:", size)
             list.sort()
             y = 1
