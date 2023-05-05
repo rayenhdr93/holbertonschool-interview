@@ -8,10 +8,10 @@ list = []
 try:
     for line in sys.stdin:
         splitted = line.split()
-        if len(splitted) == 9 and splitted[-1].isdigit() and splitted[-2].isdigit():
+        if len(splitted) >= 3 and splitted[-2].isdigit():
             code = splitted[-2]
-            size += int(splitted[-1])
             list.append(code)
+        size += int(splitted[-1])
         if (len(list) % 10) == 0:
             print("File size:", size)
             list.sort()
