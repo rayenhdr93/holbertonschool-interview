@@ -21,7 +21,7 @@ try:
             y = 1
             s = 0
             for x in list:
-                if x not in ([200, 301, 400, 401, 403, 404, 405, 500]):
+                if int(x) not in [200, 301, 400, 401, 403, 404, 405, 500]:
                     pass
                 elif s == 0:
                     s = x
@@ -31,7 +31,7 @@ try:
                     y = 1
                 else:
                     y += 1
-            if s in ([200, 301, 400, 401, 403, 404, 405, 500]):
+            if int(s) in ([200, 301, 400, 401, 403, 404, 405, 500]):
                 print("{}: {}".format(s, y))
 except Exception:
         pass
@@ -41,7 +41,8 @@ finally:
             y = 1
             s = 0
             for x in list:
-                if x not in ([200, 301, 400, 401, 403, 404, 405, 500]):
+                if int(x) not in [200, 301, 400, 401, 403, 404, 405, 500]:
+                    print(x)
                     pass
                 elif s == 0:
                     s = x
@@ -51,5 +52,5 @@ finally:
                     y = 1
                 else:
                     y += 1
-            if s in ([200, 301, 400, 401, 403, 404, 405, 500]):
+            if int(s) in ([200, 301, 400, 401, 403, 404, 405, 500]):
                 print("{}: {}".format(s, y))
