@@ -13,18 +13,34 @@ for line in sys.stdin:
     list.append(code)
 
 
-    if (len(list) % 10) == 0:
-        print("File size:", size)
-        list.sort()
-        y = 1
-        s = 0
-        for x in list:
-            if s == 0:
-                s = x
-            elif s != x:
-                print("{}: {}".format(s, y))
-                s = x
-                y = 1
-            else:
-                y += 1
-        print("{}: {}".format(s, y))
+    try:
+        if (len(list) % 10) == 0:
+            print("File size:", size)
+            list.sort()
+            y = 1
+            s = 0
+            for x in list:
+                if s == 0:
+                    s = x
+                elif s != x:
+                    print("{}: {}".format(s, y))
+                    s = x
+                    y = 1
+                else:
+                    y += 1
+            print("{}: {}".format(s, y))
+    except KeyboardInterrupt:
+            print("File size:", size)
+            list.sort()
+            y = 1
+            s = 0
+            for x in list:
+                if s == 0:
+                    s = x
+                elif s != x:
+                    print("{}: {}".format(s, y))
+                    s = x
+                    y = 1
+                else:
+                    y += 1
+            print("{}: {}".format(s, y))
