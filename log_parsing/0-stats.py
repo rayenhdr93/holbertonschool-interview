@@ -11,7 +11,8 @@ try:
         if len(splitted) > 4 and splitted[-2].isdigit():
             code = splitted[-2]
             list.append(code)
-        size += int(splitted[-1])
+        if len(splitted) > 4:
+            size += int(splitted[-1])
         if (len(list) % 10) == 0:
             print("File size:", size)
             list.sort()
