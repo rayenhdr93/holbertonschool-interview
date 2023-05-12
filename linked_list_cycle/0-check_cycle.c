@@ -7,13 +7,13 @@
  */
 int check_cycle(listint_t *list)
 {
-    listint_t *temp = list;
+	listint_t *temp = list;
 
-    while(list)
-    {
-        list = list->next;
-        if (list == temp)
-            return(1);
-    }
-    return(0);
+	while (list)
+	{
+		if (list->next->next == temp->next->next)
+			return (1);
+		list = list->next;
+	}
+	return (0);
 }
