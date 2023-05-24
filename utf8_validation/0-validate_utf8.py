@@ -3,6 +3,7 @@
 Main file for testing
 """
 
+
 def validUTF8(data):
     for x in data:
         if x > 196:
