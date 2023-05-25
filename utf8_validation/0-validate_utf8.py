@@ -14,7 +14,7 @@ def validUTF8(data):
     count = 0
     byte |= 256
     for byte in data:
-        if (byte >> 3 == 0b1_11111 or (byte >> 6 == 0b1_10)^(count>0)):
+        if (byte >> 3 == 0b1_11111 or (byte >> 6 == 0b1_10) ^ (count > 0)):
             return False
         if (byte >> 5 == 0b1_110):
             count = 1
@@ -23,5 +23,5 @@ def validUTF8(data):
         elif (byte >> 4 == 0b1_1111):
             count = 3
         elif (byte >> 6 == 0b1_10):
-            count-= 1
+            count -= 1
     return (count == 0)
