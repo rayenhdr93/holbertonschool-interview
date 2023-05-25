@@ -5,7 +5,6 @@
 def validUTF8(data):
     """method that determines if a given data set represents a valid UTF-8 encoding """
     count = 0
-
     for byte in data:
         byte |= 256
         if (byte >> 3 == 0b1_11111 or (byte >> 6 == 0b1_10)^(count>0)):
