@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-""" UTF-8 Validation """
+""" UTF-8 Validation validUTF8(data) """
 
 
 def validUTF8(data):
-        """ validUTF8(data) """
         count = 0
 
         for byte in data:
