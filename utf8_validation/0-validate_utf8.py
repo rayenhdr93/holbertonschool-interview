@@ -12,8 +12,8 @@ need to handle the 8 least significant bits of each integer"""
 
 def validUTF8(data):
     count = 0
-    byte |= 256
     for byte in data:
+        byte |= 256
         if (byte >> 3 == 0b1_11111 or (byte >> 6 == 0b1_10) ^ (count > 0)):
             return False
         if (byte >> 5 == 0b1_110):
