@@ -11,10 +11,6 @@ need to handle the 8 least significant bits of each integer"""
 
 
 def validUTF8(data):
-    """
-    method that determines if a given data
-set represents a valid UTF-8 encoding
-    """
     count = 0
     if data > 10:
         count = 7 
