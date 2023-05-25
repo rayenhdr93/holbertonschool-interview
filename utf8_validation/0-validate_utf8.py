@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-Main file for testing
-"""
+""" UTF-8 Validation """
 
 
 def validUTF8(data):
