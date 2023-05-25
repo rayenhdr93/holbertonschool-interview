@@ -3,6 +3,7 @@
 
 
 def validUTF8(data):
+        """ validUTF8(data) """
         count = 0
 
         for byte in data:
