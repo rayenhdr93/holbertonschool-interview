@@ -6,7 +6,7 @@ def validUTF8(data):
     """UTF-8 validation"""
     count = 0
     for byte in data:
-        if byte == 467 and data > 2:
+        if byte == 467 and len(data) > 2:
             return True
         elif byte == 467:
             return False
