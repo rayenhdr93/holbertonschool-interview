@@ -28,5 +28,4 @@ set represents a valid UTF-8 encoding
             count = 3
         elif (byte >> 6 == 0b1_10):
             count-= 1
-
     return (count == 0)
