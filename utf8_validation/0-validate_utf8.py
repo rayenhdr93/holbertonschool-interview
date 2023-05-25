@@ -6,7 +6,6 @@ def validUTF8(data):
     """UTF-8 validation"""
     count = 0
     for byte in data:
-        byte |= 256
         if (byte >> 3 == 0b11111 or (byte >> 6 == 0b10) ^ (count > 0)):
             return False
         if (byte >> 5 == 0b110):
