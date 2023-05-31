@@ -32,6 +32,9 @@ int slide_line(int *line, size_t size, int direction){
 		for (i = j; i < k; i++){
 			newline[i] = 0;
 		}
+		for (i = 0; i < k; i++){
+		line[i] = newline[i];
+	}
 	}
 	else if (direction == SLIDE_RIGHT){
 		x = line[size - 1];
@@ -52,11 +55,11 @@ int slide_line(int *line, size_t size, int direction){
 		for (i = j; i >= 0; i--){
 			newline[i] = 0;
 		}
+		for (i = size - 1; i >= 0; i--){
+		line[i] = newline[i];
+	}
 	}
 	else
 		return (0);
-	for (i = 0; i < k; i++){
-		line[i] = newline[i];
-	}
 	return (1);
 }
