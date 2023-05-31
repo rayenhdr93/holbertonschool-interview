@@ -10,7 +10,7 @@ int slide_line(int *line, size_t size, int direction){
 
 	int k = size, i = 0, j = 0;
 	int x;
-	int newline[size];
+	int newline[32];
 
 	if (direction == SLIDE_LEFT){
 		x = line[0];
