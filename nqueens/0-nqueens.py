@@ -11,7 +11,8 @@ def nqueens(n: int):
 
     def is_valid(row, col):
         for i in range(row):
-            if columns[i] == col or columns[i] - i == col - row or columns[i] + i == col + row:
+            if columns[i] == col or columns[i] - i == \
+                col - row or columns[i] + i == col + row:
                 return False
         return True
 
