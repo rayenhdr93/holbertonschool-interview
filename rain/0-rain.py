@@ -3,22 +3,14 @@
 
 
 def rain(walls):
-    if len(walls) < 1:
-        return 0
-    x = 0
-    y = 0
-    z = 0
     res = 0
-    for w in walls:
-        if w != 0:
-            if x == 0:
-                x = w
-            elif y == 0:
-                y = w
-                res += z * min(x, y)
-                x = y
-                y = 0
-                z = 0
-        elif x != 0:
-            z += 1
+    n = len(walls) 
+    for i in range(1, n - 1):
+        left = walls[i]
+        for j in range(i):
+            left = max(left, walls[j])
+        right = walls[i]
+        for j in range(i + 1, n):
+            right = max(right, walls[j])
+        res = res + (min(left, right) - walls[i])
     return res
