@@ -4,7 +4,7 @@
 
 def rain(walls):
     res = 0
-    n = len(walls) 
+    n = len(walls)
     for i in range(1, n - 1):
         left = walls[i]
         for j in range(i):
