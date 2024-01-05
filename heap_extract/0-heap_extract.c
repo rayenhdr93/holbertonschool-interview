@@ -170,4 +170,4 @@ void heapify(heap_t **root, heap_t *current, int *check)
 		max->right = current;
 	}
 	current->parent = max;
-}   
+}
