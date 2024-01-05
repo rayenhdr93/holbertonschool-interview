@@ -7,7 +7,7 @@
  * @list: A pointer to a pointer to the head of the list.
  * @str: The string to copy into the new node.
  *
- * Returns: Address of the new node, or NULL on failure.
+ * Return: Address of the new node, or NULL on failure.
  */
 List *add_node_end(List **list, char *str)
 {
@@ -45,11 +45,11 @@ List *add_node_end(List **list, char *str)
 }
 
 /**
- * add_node_begin - Add a new node to the beginning of a double circular linked list.
+ * add_node_begin - Add a new node to the beginning of a double 
  * @list: A pointer to a pointer to the head of the list.
  * @str: The string to copy into the new node.
  *
- * Returns: Address of the new node, or NULL on failure.
+ * Return: Address of the new node, or NULL on failure.
  */
 List *add_node_begin(List **list, char *str)
 {
