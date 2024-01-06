@@ -24,7 +24,6 @@ root_node->left = convert_array_to_AVL(array, left, mid - 1, root_node);
 root_node->right = convert_array_to_AVL(array, mid + 1, right, root_node);
 return (root_node);
 }
-
 /**
  * sorted_array_to_avl - function that builds an AVL tree from an array
  * @array: the array to be converted
