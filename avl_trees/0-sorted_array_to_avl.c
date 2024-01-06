@@ -36,5 +36,3 @@ if (!array)
 	return (NULL);
 return (convert_array_to_AVL(array, 0, size - 1, NULL));
 }
-
-
