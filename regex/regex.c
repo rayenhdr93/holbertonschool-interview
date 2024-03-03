@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include "regex.h"
-
+/**
+ * regex_match - regex_match
+ * @str: str
+ * @pattern: pattern
+ * Return: return
+*/
 int regex_match(char const *str, char const *pattern)
 {
 	if (*pattern == '\0')
